@@ -2,7 +2,6 @@ package com.example.api.pet;
 
 import com.sun.istack.NotNull;
 
-
 public class PetDTO {
 
     @NotNull

@@ -60,7 +60,7 @@ public class VetRestController {
 
     @GetMapping("/vets/{vetId}/daySchedule")
     public ResponseEntity<DaySchedule> getDayScheduleOfVet(@PathVariable Long vetId, DayOfWeek day){
-        DaySchedule schedule= vetService.getDayScheduleOfVet2(day,vetId);
+        DaySchedule schedule= vetService.getDayScheduleOfVet(day,vetId);
         if (schedule==null){
             throw new ScheduleNotFoundException("Vet has no schedule.");
         }

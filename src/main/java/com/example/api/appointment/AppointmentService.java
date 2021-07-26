@@ -40,7 +40,7 @@ public class AppointmentService {
 
     private void setAppTime(Appointment appointment, DayOfWeek appointmentDay){
         if (appointmentRepository.getAppointmentsByDayAndVet(appointmentDay,appointment.getVet().getId()).isEmpty()){
-            LocalTime start=vetService.getDayScheduleOfVet2(appointmentDay,appointment.getVet().getId()).getStartShift();
+            LocalTime start=vetService.getDayScheduleOfVet(appointmentDay,appointment.getVet().getId()).getStartShift();
             appointment.setAppointmentTime(start);
         }else {
             appointment.setAppointmentTime(appointmentRepository.getLatestAppointmentTime(appointment.getVet().getId()));

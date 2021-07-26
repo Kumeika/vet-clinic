@@ -36,8 +36,8 @@ public class VetService {
         return vetRepository.getScheduleOfVet(vetId);
     }
 
-    public DaySchedule getDayScheduleOfVet2(DayOfWeek day,Long vetId){
-        return vetRepository.getDayScheduleOfVet2(vetRepository.getScheduleOfVet(vetId),day);
+    public DaySchedule getDayScheduleOfVet(DayOfWeek day,Long vetId){
+        return vetRepository.getDayScheduleOfVet(vetRepository.getScheduleOfVet(vetId),day);
     }
 
     @Transactional
